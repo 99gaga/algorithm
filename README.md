@@ -1,5 +1,4 @@
 ## algorithm
----
 
 * Backjon Online Judge
 
