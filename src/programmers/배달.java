@@ -54,10 +54,10 @@ public class 배달 {
             if (minTimes[idx] < time) continue;
 
             for (int i=0; i<map.get(idx).size(); i++) {
-                Node to = map.get(idx).get(i);
-                int cost = to.time + minTimes[idx];
+                Node to = map.get(idx).get(i); // 갈 수 있는 마을
+                int cost = to.time + minTimes[idx]; // 다른 마을까지 걸리는 시간 + 현재 까지 걸린 시간 == 총 시간
 
-                if (cost < minTimes[to.idx]) {
+                if (cost < minTimes[to.idx]) { // 계산한 시간이 원래 걸리던 시간보다 적다면 갱신
                     minTimes[to.idx] = cost;
                     pq.offer(new Node(to.idx, cost));
                 }
@@ -80,6 +80,7 @@ class Node implements Comparable<Node> {
     public int compareTo(Node other) {
         return this.time - other.time;
     }
+
 }
 
 
