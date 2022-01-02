@@ -1,0 +1,36 @@
+package baekjon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * 카드2
+ * https://www.acmicpc.net/problem/2164
+ */
+public class boj2164 {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+
+        Queue<Integer> q = new LinkedList<>();
+        boolean isThrow = true;
+        for (int i=1; i<=n; i++) {
+            q.add(i);
+        }
+
+        while(q.size() > 1) {
+            int number = q.poll();
+            if (!isThrow) {
+                q.add(number);
+            }
+            isThrow = !isThrow;
+        }
+
+        int result = q.poll();
+        System.out.println(result);
+    }
+}
