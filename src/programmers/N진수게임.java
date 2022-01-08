@@ -3,9 +3,6 @@ package programmers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.util.Scanner;
-
 public class N진수게임 {
 
     @Test
