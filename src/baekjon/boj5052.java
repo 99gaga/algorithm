@@ -24,9 +24,9 @@ public class boj5052 {
 
             Arrays.sort(numbers);
             if (isConsistence(numbers)) {
-                System.out.println("YES\n");
+                System.out.println("YES");
             } else {
-                System.out.println("NO\n");
+                System.out.println("NO");
             }
         }
     }
